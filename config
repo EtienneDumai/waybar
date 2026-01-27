@@ -3,5 +3,17 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio"]
+  "modules-right": ["pulseaudio","battery", "cpu","memory"],
+	"battery": {
+		"format":"{capacity}%"
+	},
+	"cpu": {
+		"format":"CPU {usage}%"
+	},
+	"memory": {
+		"format": "RAM {percentage}%"
+	},
+	"pulseaudio":{
+		"format":"VOL {volume}%"
+	}
 }
