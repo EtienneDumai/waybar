@@ -1,0 +1,9 @@
+* {
+	font-family: monospace;
+	font-size: 12px;
+}
+
+window#wybar {
+	background-color: #000000;
+	color: #FFFFFF;
+}
