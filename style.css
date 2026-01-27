@@ -1,17 +1,65 @@
+/* Global */
 * {
-	font-family: monospace;
-	font-size: 12px;
+  font-family: JetBrainsMono;
+  font-size: 12px;
 }
 
+/* Barre */
 window#waybar {
-	background-color: #000000;
-	color: #FFFFFF;
+  background-color: #2b213a;
+  color: #f2e9ff;
 }
+
+/* Modules right (capsules) */
+#pulseaudio,
+#network,
 #cpu,
 #memory,
 #battery,
-#pulseaudio {
-	margin: 4px;
-	background-color: rgba(200,0,255,0.7);
-	border-radius : 6px;
+#tray,
+#clock {
+  padding: 0 12px;
+  margin: 6px 4px;
+  border-radius: 999px;
+  background-color: rgba(189, 167, 255, 0.15);
+  color: #f2e9ff;
+}
+
+/* Volume */
+#pulseaudio.muted {
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+/* Réseau */
+#network.disconnected {
+  background-color: rgba(168, 155, 191, 0.2);
+  color: #a89bbf;
+}
+
+/* Batterie */
+#battery.warning {
+  background-color: rgba(189, 167, 255, 0.25);
+  color: #bda7ff;
+}
+
+#battery.critical {
+  background-color: rgba(155, 123, 255, 0.35);
+  color: #f2e9ff;
+}
+
+/* Workspaces */
+#workspaces button {
+  padding: 0 8px;
+  margin: 6px 4px;
+  border-radius: 999px;
+  background: transparent;
+  color: #a89bbf;
+}
+
+#workspaces button.active {
+  background-color: #9b7bff;
+  color: #2b213a;
 }
