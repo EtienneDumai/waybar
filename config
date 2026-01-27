@@ -3,7 +3,7 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio","battery", "cpu","memory"],
+  "modules-right": ["pulseaudio","battery", "cpu","memory","network"],
 	"battery": {
 		"format":"{capacity}%"
 	},
@@ -15,5 +15,8 @@
 	},
 	"pulseaudio":{
 		"format":"VOL {volume}%"
+	},
+	"network": {
+		"format": "{essid}"
 	}
 }
