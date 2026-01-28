@@ -5,18 +5,30 @@
   "modules-center": ["clock"],
   "modules-right": ["pulseaudio","battery", "cpu","memory","network"],
 	"battery": {
-		"format":"{capacity}%"
+		"states":{
+			"full":100,
+			"mid":75,
+			"warning":50,
+			"critical":25
+			},
+		"format":"{icon} {capacity}%",
+		"format-charging":" {capacity}",
+		"format-full":"  {capacity}",
+		"format-mid":"  {capacity}",
+		"format-warning":"  {capacity}",
+		"format-critical":"  {capacity}",
+		"format-icons": [" "," "," "," "," "]
 	},
 	"cpu": {
-		"format":"CPU {usage}%"
+		"format":"󰻠 {usage}%"
 	},
 	"memory": {
-		"format": "RAM {percentage}%"
+		"format": "  {percentage}%"
 	},
 	"pulseaudio":{
-		"format":"VOL {volume}%"
+		"format":"  {volume}%"
 	},
 	"network": {
-		"format": "{essid}"
+		"format": "󰖩 {essid}"
 	}
 }

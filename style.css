@@ -1,6 +1,11 @@
 /* Global */
 * {
-  font-family: JetBrainsMono;
+ font-family:
+    "JetBrainsMono Nerd Font",
+    "Noto Sans",
+    "Font Awesome 6 Free",
+    "Font Awesome 6 Brands",
+    "Symbols Nerd Font";
   font-size: 12px;
 }
 
@@ -42,12 +47,18 @@ window#waybar {
 /* Batterie */
 #battery.warning {
   background-color: rgba(189, 167, 255, 0.25);
-  color: #bda7ff;
+  color: #ffa500;
 }
 
 #battery.critical {
   background-color: rgba(155, 123, 255, 0.35);
-  color: #f2e9ff;
+  color: #ff0000;
+}
+#battery.full {
+  color: rgb(0,255,0);
+}
+battery.charging {
+  color: #00a2ff;
 }
 
 /* Workspaces */
