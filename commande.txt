@@ -1,0 +1,1 @@
+sudo pacman -S ttf-nerd-fonts-symbols ttf-font-awesome
