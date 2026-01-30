@@ -57,7 +57,10 @@ window#waybar {
 #battery.full {
   color: rgb(0,255,0);
 }
-battery.charging {
+#battery.mid {
+  color : rgb(0,255,0);
+}
+#battery.charging {
   color: #00a2ff;
 }
 
@@ -73,4 +76,32 @@ battery.charging {
 #workspaces button.active {
   background-color: #9b7bff;
   color: #2b213a;
+}
+
+/* CPU */
+#cpu.cold {
+  color: #00a2ff;
+}
+#cpu.chill {
+  color: rgb(0,255,0);
+}
+#cpu.ok {
+  color : #ffa500;
+}
+#cpu.full {
+  color: #ff0000;
+}
+
+/* MEMORY */
+#memory.critical {
+  color: #ff0000;
+}
+#memory.warning {
+  color: #ffa500;
+}
+#memory.ok {
+  color: rgb(0,255,0);
+}
+#memory.low {
+  color: #00a2ff;
 }

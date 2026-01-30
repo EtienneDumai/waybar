@@ -12,18 +12,34 @@
 			"critical":25
 			},
 		"format":"{icon} {capacity}%",
-		"format-charging":" {capacity}",
-		"format-full":"  {capacity}",
-		"format-mid":"  {capacity}",
-		"format-warning":"  {capacity}",
-		"format-critical":"  {capacity}",
+		"format-charging":" {capacity}%",
+		"format-full":"  {capacity}%",
+		"format-mid":"  {capacity}%",
+		"format-warning":"  {capacity}%",
+		"format-critical":"  {capacity}%",
 		"format-icons": [" "," "," "," "," "]
 	},
 	"cpu": {
-		"format":"󰻠 {usage}%"
+		"states":{
+			"full":75,
+			"ok":50,
+			"chill":25,
+			"cold":0
+			},
+		"format":"󰻠 {usage}%",
+		"format-full":"󰻠 {usage}%",
+		"format-ok":"󰻠 {usage}%",
+		"format-chill":"󰻠 {usage}%",
+		"format-cold":"󰻠 {usage}%"
 	},
 	"memory": {
-		"format": "  {percentage}%"
+		"states":{
+			"low": 0,
+			"ok": 50,
+			"warning": 75,
+			"critical": 90
+ 			},
+		"format": "  {used:0.1f}G/{total:0.1f}G ({percentage}%)"
 	},
 	"pulseaudio":{
 		"format":"  {volume}%"
