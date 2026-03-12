@@ -1,50 +1,92 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
-  "modules-right": ["pulseaudio","battery", "cpu","memory","network"],
-	"battery": {
-		"states":{
-			"full":100,
-			"mid":75,
-			"warning":50,
-			"critical":25
-			},
-		"format":"{icon} {capacity}%",
-		"format-charging":" {capacity}%",
-		"format-full":"  {capacity}%",
-		"format-mid":"  {capacity}%",
-		"format-warning":"  {capacity}%",
-		"format-critical":"  {capacity}%",
-		"format-icons": [" "," "," "," "," "]
-	},
-	"cpu": {
-		"states":{
-			"full":75,
-			"ok":50,
-			"chill":25,
-			"cold":0
-			},
-		"format":"󰻠 {usage}%",
-		"format-full":"󰻠 {usage}%",
-		"format-ok":"󰻠 {usage}%",
-		"format-chill":"󰻠 {usage}%",
-		"format-cold":"󰻠 {usage}%"
-	},
-	"memory": {
-		"states":{
-			"low": 0,
-			"ok": 50,
-			"warning": 75,
-			"critical": 90
- 			},
-			"format": "  {used:0.1f}GiB/{total:0.1f}GiB ({percentage}%)   {swapUsed:0.1f}GiB/{swapTotal:0.1f}GiB ({swapPercentage}%)"
-	},
-	"pulseaudio":{
-		"format":"  {volume}%"
-	},
-	"network": {
-		"format": "󰖩 {essid}"
-	}
+  "height": 38,
+  "spacing": 6,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "mpris"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "battery",
+    "cpu",
+    "memory",
+    "network"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "⏸ {dynamic}",
+    "dynamic-len": 40,
+    "dynamic-order": ["title", "artist"],
+    "player-icons": {
+      "spotify": "",
+      "firefox": "",
+      "chromium": "",
+      "default": ""
+    },
+    "status-icons": {
+      "paused": "⏸",
+      "playing": "▶"
+    },
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+
+  "clock": {
+    "format": "  {:%d/%m/%Y %H:%M}"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " muté",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-full": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{capacity}% - {timeTo}\n{power}W"
+  },
+
+  "cpu": {
+    "format": "󰻠 {usage}%"
+  },
+
+  "memory": {
+    "format": " {used:0.1f}G/{total:0.1f}G"
+  },
+
+  "network": {
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": "󰈀 Ethernet",
+    "format-disconnected": "󰖪 Hors ligne",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}",
+    "tooltip-format-ethernet": "{ipaddr}"
+  }
 }
