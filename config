@@ -13,7 +13,8 @@
   ],
   "modules-right": [
     "pulseaudio",
-    "battery",
+    "backlight",
+    "custom/battery",
     "cpu",
     "memory",
     "network"
@@ -26,7 +27,13 @@
       "*": 5
     }
   },
-
+  "backlight": {
+  "device": "intel_backlight",
+  "format": "{icon} {percent}%",
+  "format-icons": ["○","◔","◑","◕","●"],
+  "on-scroll-up": "brightnessctl set +5%",
+  "on-scroll-down": "brightnessctl set 5%-"
+},
   "mpris": {
     "format": "{player_icon} {dynamic}",
     "format-paused": "⏸ {dynamic}",
@@ -54,13 +61,17 @@
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": " muté",
+    "format-muted": " muted",
     "format-icons": {
       "default": ["", "", ""]
     },
     "on-click": "pavucontrol"
   },
-
+  "custom/battery": {
+  "exec": "~/.config/waybar/battery.sh",
+  "interval": 10,
+  "return-type": "json"
+},
   "battery": {
     "states": {
       "warning": 30,
