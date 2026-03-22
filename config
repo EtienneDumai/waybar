@@ -1,6 +1,6 @@
 {
     "position": "top",
-    "height": 35,
+    "height": 28,
     "spacing": 12,
     "margin-top": 0,
     "margin-bottom": 0,
@@ -20,7 +20,8 @@
         "custom/battery",
         "cpu",
         "memory",
-        "network"
+        "network",
+        "custom/power"
     ],
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -44,12 +45,7 @@
         "separate-outputs": true
     },
     "clock": {
-        "format": "  {:%d/%m/%Y %H:%M}",
-        "timezone": "America/Monterrey",
-        "locale": "es_MX.utf8",
-        "interval": 1,
-        "on-click": "flatpak run com.ml4w.calendar",
-        "tooltip": true
+    	"format": "  {:%d/%m/%Y %H:%M}"
     },
     "cpu": {
         "format": "󰻠 {usage}%",
@@ -143,7 +139,7 @@
         "icon-size": 18
     },
     "custom/arch": {
-        "format": "<span font='JetBrainsMono Nerd Font Mono 20' color='#c061cb'>󰣇</span>",
+        "format": "<span font='JetBrainsMono Nerd Font Mono 22' color='#00e5ff'>󰣇</span>",
         "on-click": "$HOME/.local/bin/vsfetch",
         "tooltip": false,
         "arch-icon-glyph": "󰣇",
@@ -183,7 +179,7 @@
     },
     "custom/power": {
         "format": "⏻",
-        "on-click": "wlogout -b 3 -c 20 -r 20 -L 400 -R 400 -T 200 -B 200 --protocol layer-shell",
+        "on-click": "shutdown now",
         "tooltip": false
     },
     "custom/settings": {
