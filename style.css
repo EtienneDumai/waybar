@@ -81,7 +81,7 @@ window#waybar {
 
 /* Arch icon */
 #custom-arch {
-    color: @blue;
+    color: @mauve;
     padding: 0 10px 0 15px;
 }
 
@@ -105,9 +105,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: @blue;
-    color: @base;
-    animation: ws-active 3s ease infinite;
+    background: @mauve;
+    color: @base;  
 }
 
 #workspaces button.urgent {
